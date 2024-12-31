@@ -7,7 +7,11 @@ body{
     justify-content:  center;
     height: 100vh;
     background-color: darkorchid;
+    background-image: url('assets/background.png'); 
+    background-size: cover; 
+    background-position: center;
 }
+
 
 .form-container{
     background-color: white;
@@ -127,4 +131,43 @@ body{
 
 .btn.btn-twitter:hover{
     background-color: rgb(8, 151, 194);
+}
+
+/* Contenedor de la imagen al lado del formulario */
+.form-container .welcome-screen-container{
+    background-image: url('assets/screen.png'); 
+    background-size: cover; /* la imagen cubre toda el área */
+    background-position: center; 
+    height: 100%;
+    width: 50%;
+    filter: blur(1px);
+}
+
+
+/* Diseño para pantallas más pequeñas */
+@media screen and (max-width: 1357px){
+    .form-container{
+        width: 95%;
+    }
+
+    .form-container .login-container{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .form-container .welcome-screen-container{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .form-container{
+        height: 90%;
+    }
+    .form-container .login-container{
+        width: 350px;
+    }
+    .form-container .welcome-screen-container{
+        display: none;
+    }
 }
